@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(80, 56, 94);
+    background: radial-gradient(circle, rgba(80, 56, 94, 1) 0%, rgba(47, 47, 47, 1) 100%);
+    color: white;
+}
+
+table {
+    border-spacing: 1px;
+    border: none;
+    /* border-color: white; */
+}
+
+thead {
+    background-color: blueviolet;
+}
+
+tbody {
+    background-color: aliceblue;
+    color: rgb(49, 44, 48);
+}
+
+th {
+    border: none;
+    padding: 1em;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    padding: 0.3em;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}

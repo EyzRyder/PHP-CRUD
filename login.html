@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background: #814b92;
+            color: white;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+        }
+
+        h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        input {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #209f1a;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <Form action="login.php" method="post">
+            <h2>Login</h2>
+            <input type="text" name="name" id="name" placeholder="Digite seu nome de usuário" required />
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
+            <button type="submit" id="submit" class="submit-button">
+                Enter
+            </button>
+        </Form>
+    </div>
+</body>
+
+</html>
