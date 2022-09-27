@@ -1,5 +1,4 @@
 <?php
-
         $conexao = mysqli_connect('localhost', 'root', 'raizV2toorU2', 'nossobanco');
         if (!$conexao) {
             echo 'Erro: Unable to connect to MySQL.' . PHP_EOL;
