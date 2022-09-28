@@ -1,57 +1,74 @@
-<?php
-$id = [];
-$conexao = mysqli_connect('localhost', 'root', 'raizV2toorU2', 'nossobanco');
-mysqli_select_db($conexao, "nossobanco");
-$query = sprintf("SELECT id, first_name, last_name, address FROM user");
-$dados = mysqli_query($conexao, $query) or die(mysqli_connect_error() . PHP_EOL);
-?>
-
 <!DOCTYPE html>
-<html lang="br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=poppins">
-    <link rel="stylesheet" href="style.css">
-    <title>dashboard</title>
+    <title>Login</title>
+    <style>
+        body {
+            background: #814b92;
+            color: white;
+        }
+
+        form {
+            display: grid;
+            place-items: center;
+            grid-template-areas:
+    "a "
+    " b  "
+    " c  "
+    " d  ";
+}
+        
+
+        h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        input {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h2{
+            grid-area: a; 
+        }
+        input[type="text"] {
+            grid-area: b;
+        }
+
+        input[type="password"] {
+            grid-area: c;
+        }
+
+        button {
+            background-color: #209f1a;
+            color: white;
+            border: none;
+            grid-area: d;
+        }
+    </style>
 </head>
 
 <body>
-    <center>
-        <h2>Login</h2>
-        <form action="">
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required />
-            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobre nome" required />
-            <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required />
-            <button>input</button>
-        </form>
-        <h1>Dados inseridos</h1>
-        <table border=1>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Sobrenome</th>
-                    <th>Endereço</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+        <Form action="login.php" method="post">
+        <?php
+            echo "<h2>Login</h2>";
+            ?>
+            <input type="text" name="name" id="name" placeholder="Digite seu nome de usuário" required />
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
+            <button type="submit" id="submit" class="submit-button">
+                Enter
+            </button>
 
-                while ($row = $dados->fetch_assoc()) {
-                    echo '<tr>';
-                    echo '<td>' . $row['id'] . '</td>';
-                    echo '<td>' . $row['first_name'] . '</td>';
-                    echo '<td>' . $row['last_name'] . '</td>';
-                    echo '<td>' . $row['address'] . '</td>';
-                    echo '</tr>';
-                }
-                ?>
-            </tbody>
-        </table>
-    </center>
+        </Form>
 </body>
 
 </html>
