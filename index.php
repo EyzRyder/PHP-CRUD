@@ -59,22 +59,15 @@
 
 <body>
         <Form action="login.php" method="post">
-<<<<<<< HEAD
         <?php
             echo "<h2>Login</h2>";
             ?>
-=======
-            <h2>Login</h2>
->>>>>>> 63a5f438a0ec8def466893399a3c38821be33e4d
             <input type="text" name="name" id="name" placeholder="Digite seu nome de usuário" required />
             <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
             <button type="submit" id="submit" class="submit-button">
                 Enter
             </button>
-<<<<<<< HEAD
 
-=======
->>>>>>> 63a5f438a0ec8def466893399a3c38821be33e4d
         </Form>
 </body>
 
