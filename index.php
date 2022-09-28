@@ -12,22 +12,16 @@
             color: white;
         }
 
-        div {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-        }
-
         form {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-content: center;
-            justify-content: center;
-        }
+            display: grid;
+            place-items: center;
+            grid-template-areas:
+    "a "
+    " b  "
+    " c  "
+    " d  ";
+}
+        
 
         h2 {
             padding-top: 10px;
@@ -43,16 +37,27 @@
             margin-bottom: 10px;
         }
 
+        h2{
+            grid-area: a; 
+        }
+        input[type="text"] {
+            grid-area: b;
+        }
+
+        input[type="password"] {
+            grid-area: c;
+        }
+
         button {
             background-color: #209f1a;
             color: white;
             border: none;
+            grid-area: d;
         }
     </style>
 </head>
 
 <body>
-    <div>
         <Form action="login.php" method="post">
             <h2>Login</h2>
             <input type="text" name="name" id="name" placeholder="Digite seu nome de usuário" required />
@@ -61,7 +66,6 @@
                 Enter
             </button>
         </Form>
-    </div>
 </body>
 
 </html>
