@@ -1,11 +1,10 @@
 <?php
 session_start();
-$conexao = mysqli_connect('localhost', 'root', 'raizV2toorU2', 'nossobanco');
+include('conexao.php');
 mysqli_select_db($conexao, "nossobanco");
 $query = sprintf("SELECT id, first_name, last_name, address FROM user");
 $dados = mysqli_query($conexao, $query) or die(mysqli_connect_error() . PHP_EOL);
 ?>
-
 <!DOCTYPE html>
 <html lang="br">
 
@@ -19,13 +18,14 @@ $dados = mysqli_query($conexao, $query) or die(mysqli_connect_error() . PHP_EOL)
 </head>
 
 <body>
+    <h4>User: <?php echo $_SESSION['name']; ?></h4>
     <center>
-        <h2>Login</h2>
-        <form action="">
+        <h2>Cadastrar</h2>
+        <form action="cadastro.php" method="POST">
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required />
             <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobre nome" required />
             <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required />
-            <button>input</button>
+            <button type="submit" id="submit">input</button>
         </form>
         <h1>Dados inseridos</h1>
         <table border=1>
