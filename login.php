@@ -3,7 +3,7 @@ session_start();
 include('conexao.php');
 
 if(empty($_POST['name']) || empty($_POST['password'])){
-    header('Location: index.php');
+    header('Location: index.html');
     exit();
 }
 

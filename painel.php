@@ -1,6 +1,9 @@
 <?php
 session_start();
-include('verifica_login.php');
+if (!$_SESSION['name']) {
+    header('Location: index.html');
+    exit();
+}
 include('conexao.php');
 mysqli_select_db($conexao, "nossobanco");
 $query = sprintf("SELECT id, first_name, last_name, address FROM user");
