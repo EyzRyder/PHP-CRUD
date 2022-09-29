@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('verifica_login.php');
 include('conexao.php');
 mysqli_select_db($conexao, "nossobanco");
 $query = sprintf("SELECT id, first_name, last_name, address FROM user");
