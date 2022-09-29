@@ -36,12 +36,13 @@ table {
 }
 
 thead {
-    background-color: blueviolet;
+    background-color: #6818b280;
+    color: #ffffffd1;
 }
 
 tbody {
-    background-color: aliceblue;
-    color: rgb(49, 44, 48);
+    background-color: #9373856e;
+    color: rgb(211 201 209 / 82%);
 }
 
 th {
