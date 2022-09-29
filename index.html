@@ -16,12 +16,12 @@
             display: grid;
             place-items: center;
             grid-template-areas:
-    "a "
-    " b  "
-    " c  "
-    " d  ";
-}
-        
+                "a "
+                " b  "
+                " c  "
+                " d  ";
+        }
+
 
         h2 {
             padding-top: 10px;
@@ -37,9 +37,10 @@
             margin-bottom: 10px;
         }
 
-        h2{
-            grid-area: a; 
+        h2 {
+            grid-area: a;
         }
+
         input[type="text"] {
             grid-area: b;
         }
@@ -58,17 +59,15 @@
 </head>
 
 <body>
-        <Form action="login.php" method="post">
-        <?php
-            echo "<h2>Login</h2>";
-            ?>
-            <input type="text" name="name" id="name" placeholder="Digite seu nome de usuário" required />
-            <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
-            <button type="submit" id="submit" class="submit-button">
-                Enter
-            </button>
+    <Form action="login.php" method="POST">
+<h2>Login</h2>
+        <input type="text" name="name" id="name" placeholder="Digite seu nome de usuário" required />
+        <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
+        <button type="submit" id="submit" class="submit-button">
+            Enter
+        </button>
 
-        </Form>
+    </Form>
 </body>
 
 </html>
