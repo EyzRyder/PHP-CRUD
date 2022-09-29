@@ -27,8 +27,9 @@ $dados = mysqli_query($conexao, $query) or die(mysqli_connect_error() . PHP_EOL)
     <button><a href="logout.php">Sair</a></button>
     </div>
     <center>
-        <h2>Cadastrar</h2>
-        <form action="cadastro.php" method="POST">
+        
+        <form action="cadastro.php" method="POST" class="cadastro">
+            <h2>Cadastrar</h2>
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required />
             <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobre nome" required />
             <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required />

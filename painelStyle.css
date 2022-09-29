@@ -7,19 +7,26 @@ body {
     font-family: system-ui;
 }
 
+h2 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2%;
+    margin-bottom: 4%;
+}
+
 #box {
     display: grid;
     place-items: center;
-background-color: #480f7c;
-box-shadow: inset -1px 1px 20px 8px #1b161d87;
-right: 0;
-right: 0;
-top: 0;
-padding-right: 10px;
-padding-left: 20px;
-padding-bottom: 20px;
-position: absolute;
-border-radius: 0 0 0 10px;
+    background-color: #480f7c;
+    box-shadow: inset -1px 1px 20px 8px #1b161d87;
+    right: 0;
+    right: 0;
+    top: 0;
+    padding-right: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    border-radius: 0 0 0 10px;
 }
 
 table {
@@ -54,14 +61,27 @@ td {
     align-items: center;
 }
 
-form {
-    width: 35em;
-    display: flex;
+.cadastro {
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
+    width: 30%;
+    background-color: #42104d6c;
+    box-shadow:
+        inset 0px 0px 20px 3px rgb(112 201 108 / 27%),
+        0px 0px 11px 2px #523858ba;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    margin-top: 3%;
+    place-items: center;
+    grid-template-areas:
+        "a "
+        " b  "
+        " c  "
+        " d  ";
 }
 
 input {
@@ -69,4 +89,20 @@ input {
     padding-bottom: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+button {
+    background-color: #1b161d;
+    transition: background-color cubic-bezier(0.44, 0.32, 0.17, 0.84) 1s;
+    ;
+    color: #ffffff94;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #3bb13591;
+    color: white;
+    box-shadow: inset 0px 0px 20px 3px rgb(28 187 21 / 27%), 0px 0px 11px 2px #3e7c4aad;
 }
