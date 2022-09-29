@@ -20,6 +20,7 @@ $dados = mysqli_query($conexao, $query) or die(mysqli_connect_error() . PHP_EOL)
 
 <body>
     <h4>User: <?php echo $_SESSION['name']; ?></h4>
+    <button><a href="logout.php">Sair</a></button>
     <center>
         <h2>Cadastrar</h2>
         <form action="cadastro.php" method="POST">
