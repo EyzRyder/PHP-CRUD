@@ -17,7 +17,7 @@ $dados = mysqli_query($conexao, $query) or die(mysqli_connect_error() . PHP_EOL)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=poppins">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="painelStyle.css">
     <title>dashboard</title>
 </head>
 
