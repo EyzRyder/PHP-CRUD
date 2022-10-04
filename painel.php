@@ -27,6 +27,7 @@ function logout()
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=poppins">
     <link rel="stylesheet" href="painelStyle.css">
+    <link rel="shortcut icon" href="https://bessiportfolio.vercel.app/static/media/logo.5c42e2e32cbeebcb4c20467e5dd0f8dd.svg" type="image/x-icon">
     <title>dashboard</title>
 </head>
 
@@ -48,7 +49,7 @@ function logout()
                 </tr>
             </thead>
             <tbody>
-               
+
             </tbody>
         </table>
         <button id="inserir">Cadastrar User</button>
@@ -62,6 +63,7 @@ function logout()
             <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required />
             <button name="btn" type="submit" id="submit">input</button>
         </form>
-</div>
+    </div>
     <script src="custum.js"></script>
+
 </html>
