@@ -10,8 +10,8 @@ body {
 h2 {
     margin: 0;
     padding: 0;
+    padding-top: 5px;
     padding-bottom: 2%;
-    margin-bottom: 4%;
 }
 
 #box {
@@ -68,14 +68,13 @@ td {
     align-content: center;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    background-color: #42104d6c;
+    width: 25%;
+    background-color: rgb(66 16 77 / 84%);;
     box-shadow:
         inset 0px 0px 20px 3px rgb(112 201 108 / 27%),
         0px 0px 11px 2px #523858ba;
     padding: 20px;
     border-radius: 10px;
-    display: grid;
     margin-top: 3%;
     place-items: center;
     grid-template-areas:
@@ -86,13 +85,19 @@ td {
 }
 
 input {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 10px;
+    background: rgb(118 205 201 / 20%);
+    border-radius: 10px;
+    border: none;
     margin-top: 5px;
     margin-bottom: 5px;
+    width: 95%;
+    color: white;
+    
 }
 
 button {
+    margin-top: 5px;
     background-color: #1b161d;
     transition: background-color cubic-bezier(0.44, 0.32, 0.17, 0.84) 1s;
     ;
@@ -106,4 +111,35 @@ button:hover {
     background-color: #3bb13591;
     color: white;
     box-shadow: inset 0px 0px 20px 3px rgb(28 187 21 / 27%), 0px 0px 11px 2px #3e7c4aad;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal-content {
+    margin: auto;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(177, 28, 28);
+    text-decoration: none;
+    cursor: pointer;
 }
