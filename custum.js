@@ -23,6 +23,16 @@ const listarUsers = async () => {
     tbody.innerHTML = resposta;
 }
 
+async function apagarUsuarioDados(id) {
+
+  var confirmar = confirm("Tem certeza que deseja excluir o registro selecionado?");
+
+  if (confirmar == true) {
+    const dados = await fetch('apagar.php?id=' + id);
+  }
+
+}
+
 listarUsers();
 
 
