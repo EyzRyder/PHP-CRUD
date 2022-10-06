@@ -11,7 +11,7 @@ while ($row = $dados->fetch_assoc()) {
     echo '<td>' . $row['last_name'] . '</td>';
     echo '<td>' . $row['address'] . '</td>';
     echo '<td> <form method="POST"> 
-        <button name="editRow">Edit</button> ';
-    echo ' <button name="deleteRow">Delete</button> </form> </td>';
+        <button name="editRow" class="edit">Edit</button> ';
+    echo ' <button name="deleteRow" class="del" >Delete</button> </form> </td>';
     echo '</tr>';
 }

@@ -26,7 +26,7 @@ function logout()
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=poppins">
-    <link rel="stylesheet" href="painelStyle.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="shortcut icon" href="https://bessiportfolio.vercel.app/static/media/logo.5c42e2e32cbeebcb4c20467e5dd0f8dd.svg" type="image/x-icon">
     <title>dashboard</title>
 </head>
@@ -34,10 +34,12 @@ function logout()
 <body>
     <form method="post" id="box">
         <h4>User: <?php echo $_SESSION['name']; ?></h4>
-        <button name="logout">Sair</button>
+        <button class="green" name="logout">Sair</button>
     </form>
-    <center>
+
+    <div class="table">
         <h1>Dados inseridos</h1>
+        <button class="green" id="inserir">Cadastrar User</button>
         <table border=1>
             <thead>
                 <tr>
@@ -52,16 +54,16 @@ function logout()
 
             </tbody>
         </table>
-        <button id="inserir">Cadastrar User</button>
-    </center>
+    </div>
+
     <div class="modal" id="modalCadastro">
         <form class="modal-content cadastro" action="cadastro.php" method="POST">
             <span class="close">&times;</span>
-            <h2>Cadastrar</h2>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required />
-            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobre nome" required />
-            <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required />
-            <button name="btn" type="submit" id="submit">input</button>
+            <h2 class="two">Cadastrar</h2>
+            <input type="text" name="nome" id="nome" class="inpt" placeholder="Digite seu nome" required />
+            <input type="text" name="sobrenome" id="sobrenome" class="inpt" placeholder="Digite seu sobre nome" required />
+            <input type="text" name="endereco" id="endereco" class="inpt" placeholder="Digite seu endereço" required />
+            <button class="green" name="btn" type="submit" id="submit">input</button>
         </form>
     </div>
     <script src="custum.js"></script>

@@ -7,7 +7,7 @@ body {
     font-family: system-ui;
 }
 
-h2 {
+h2.two {
     margin: 0;
     padding: 0;
     padding-top: 5px;
@@ -69,7 +69,8 @@ td {
     justify-content: center;
     align-items: center;
     width: 25%;
-    background-color: rgb(66 16 77 / 84%);;
+    background-color: rgb(66 16 77 / 84%);
+    ;
     box-shadow:
         inset 0px 0px 20px 3px rgb(112 201 108 / 27%),
         0px 0px 11px 2px #523858ba;
@@ -84,7 +85,7 @@ td {
         " d  ";
 }
 
-input {
+input.inpt {
     padding: 10px;
     background: rgb(118 205 201 / 20%);
     border-radius: 10px;
@@ -93,7 +94,7 @@ input {
     margin-bottom: 5px;
     width: 95%;
     color: white;
-    
+
 }
 
 button {
@@ -107,7 +108,30 @@ button {
     border-radius: 10px;
 }
 
-button:hover {
+button.edit:hover {
+    background-color: #dae61591;
+    color: white;
+    box-shadow: inset 0px 0px 20px 3px rgb(214 221 170 / 27%), 0px 0px 11px 2px #cdbc1ead;
+}
+
+button.del:hover {
+    background-color: rgb(197 30 30);
+    color: white;
+    box-shadow: inset 0px 0px 20px 3px rgb(131 18 139 / 41%), 0px 0px 11px 2px #a13232ad;
+}
+
+button.green:hover {
+    background-color: #3bb13591;
+    color: white;
+    box-shadow: inset 0px 0px 20px 3px rgb(28 187 21 / 27%), 0px 0px 11px 2px #3e7c4aad;
+}
+
+
+button.login {
+    grid-area: btn;
+}
+
+button.login:hover {
     background-color: #3bb13591;
     color: white;
     box-shadow: inset 0px 0px 20px 3px rgb(28 187 21 / 27%), 0px 0px 11px 2px #3e7c4aad;
@@ -142,4 +166,60 @@ button:hover {
     color: rgb(177, 28, 28);
     text-decoration: none;
     cursor: pointer;
+}
+
+.table {
+    display: grid;
+    place-items: center;
+}
+
+form.adminLog {
+    background-color: #42104d6c;
+    box-shadow:
+        inset 0px 0px 20px 3px rgb(112 201 108 / 27%),
+        0px 0px 11px 2px #523858ba;
+    padding: 30px 50px 30px 50px;
+    ;
+    border-radius: 24px;
+    display: grid;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(0, -50%);
+    place-items: center;
+    grid-template-areas:
+        "title"
+        "logA"
+        "logB"
+        "btn";
+}
+
+
+h2.title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 0;
+    font-family: system-ui;
+    color: #70c96c;
+    grid-area: title;
+}
+
+input.data {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgb(118 205 201 / 20%);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    width: 95%;
+}
+
+input.data[type="text"] {
+    grid-area: logA;
+}
+
+input.data[type="password"] {
+    grid-area: logB;
 }
