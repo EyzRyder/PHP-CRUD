@@ -32,6 +32,7 @@ h2.two {
 table {
     border-spacing: 1px;
     border: none;
+    grid-area: tab;
     /* border-color: white; */
 }
 
@@ -170,6 +171,9 @@ button.login:hover {
 
 .table {
     display: grid;
+    grid-template-areas:
+        ". one greenbtn ."
+        "tab tab tab tab";
     place-items: center;
 }
 
@@ -194,6 +198,13 @@ form.adminLog {
         "btn";
 }
 
+.h1input {
+    grid-area: one;
+}
+
+.table>.green {
+    grid-area: greenbtn;
+}
 
 h2.title {
     padding-top: 10px;

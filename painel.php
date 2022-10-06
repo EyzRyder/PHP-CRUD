@@ -38,7 +38,7 @@ function logout()
     </form>
 
     <div class="table">
-        <h1>Dados inseridos</h1>
+        <h1 class="h1input">Dados inseridos</h1>
         <button class="green" id="inserir">Cadastrar User</button>
         <table border=1>
             <thead>
